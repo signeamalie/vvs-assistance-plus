@@ -103,11 +103,12 @@
 
 @media (max-width: 800px) {
   .hero {
-    padding: 0 1.5rem;
+    min-height: 120vh;
+    padding: 0 1.5rem 4rem;
   }
   .hero__content {
     margin-left: 0;
-    padding: 6rem 0 2rem;
+    padding: 6rem 0 3rem;
   }
   .hero__services, .hero__buttons {
     grid-template-columns: 1fr;
@@ -115,6 +116,10 @@
   }
   .hero__services {
     margin-top: 3rem;
+  }
+  .hero__buttons {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 .service-plus {
