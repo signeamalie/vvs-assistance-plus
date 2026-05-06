@@ -1,37 +1,164 @@
 <!doctype html>
 <html lang="da">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VVS Assistance</title>
+
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script src="./js/main.js" defer></script>
-        <!--google fonts-->
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
   </head>
-  <body>
 
-    <!-- header (kommer senere) -->
-    <header></header>
-  
-    <!-- hero -->
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="VVS Assistance logo" class="header__logo">
+        </a>
+
+        <button class="header__burger" id="burgerBtn" aria-label="åbn menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- fuldskærmsmenu -->
+      <nav class="menu" id="menu">
+        <button class="menu__close" id="closeBtn" aria-label="luk menu">✕</button>
+
+        <ul class="menu__list">
+          <li><a href="#">Ring til os</a></li>
+          <li><a href="#">Akut</a></li>
+          <li><a href="#">Book online</a></li>
+          <li><a href="#">Få et VVS-tilbud</a></li>
+          <li><a href="#">Erhverv</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="service-aftale.html">VVS Assistance+</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
+      <!-- hero -->
       <section class="hero">
+        <div class="hero__bg"></div>
+
         <div class="hero__content">
           <h1 class="hero__title">
             AKUT VVS I KØBENHAVN - VI ER HOS DIG INDEN FOR KORT TID
           </h1>
-  
-          <p class="hero__subtitle">
-            Akut problem? Ring nu <br>
-            Ikke akut? Book tid på 30 sekunder
-          </p>
+
+          <p class="hero__text">Akut problem? Ring nu</p>
+          <p class="hero__text">Ikke akut? Book tid på 30 sekunder</p>
+
+          <div class="hero__services">
+            <article class="hero__service">
+              <h2>vi kører akut</h2>
+
+              <ul>
+                <li>Hurtig udrykning i København og omegn</li>
+                <li>Vi stopper problemet med det samme</li>
+                <li>Ingen unødvendig ventetid</li>
+              </ul>
+            </article>
+
+            <article class="hero__service">
+              <h2>book vvs-besøg online</h2>
+
+              <ul>
+                <li>Se tider med det samme</li>
+                <li>Book på få sekunder</li>
+                <li>Fast timepris</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="hero__buttons">
+            <a href="tel:31101777" class="button">ring nu - 31 10 17 77</a>
+            <a href="#" class="button">book online</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- serviceaftale teaser -->
+      <section class="service-plus">
+        <div class="service-plus__inner">
+          <article class="service-plus__intro">
+            <p class="service-plus__eyebrow">VVS Assistance+</p>
+
+            <h2 class="service-plus__title">
+              en fast serviceaftale, før problemet opstår
+            </h2>
+
+            <p class="service-plus__text">
+              Med VVS Assistance+ får du overblik, tryghed og en fast kontakt til VVS-service.
+              Aftalen er udviklet til dig, der vil undgå uforudsete problemer og have en mere
+              overskuelig løsning, når der opstår behov for hjælp.
+            </p>
+
+            <a href="service-aftale.html" class="button service-plus__button">
+              se serviceaftaler
+            </a>
+          </article>
+
+          <article class="service-plus__card">
+            <header class="service-plus__card-header">
+              <h3>VVS Assistance+</h3>
+              <p>Vælg den aftale, der passer til dit behov</p>
+            </header>
+
+            <table class="service-plus__table">
+              <thead>
+                <tr>
+                  <th>Indhold</th>
+                  <th>Privat</th>
+                  <th>Erhverv</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Fast kontakt</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                </tr>
+
+                <tr>
+                  <td>Årligt VVS-tjek</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                </tr>
+
+                <tr>
+                  <td>Prioriteret hjælp</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                </tr>
+
+                <tr>
+                  <td>Gennemsigtig pris</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                </tr>
+
+                <tr>
+                  <td>Tilpasset erhvervsbehov</td>
+                  <td>-</td>
+                  <td>✓</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
         </div>
       </section>
     </main>
-  
   </body>
 </html>

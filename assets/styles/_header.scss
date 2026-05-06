@@ -1,0 +1,33 @@
+.header {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #141e2b;
+  
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2rem;
+    }
+  
+    &__logo {
+      display: block;
+      height: 30px;
+    }
+  
+    &__burger {
+      border: none;
+      background: none;
+      cursor: pointer;
+  
+      span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 5px 0;
+        background-color: #eef8fb;
+      }
+    }
+  }

@@ -1,0 +1,85 @@
+@import "header";
+@import "buttons";
+@import "hero";
+@import "service-plus";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #141e2b;
+  color: #eef8fb;
+}
+
+// fuldskærmsmenu
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem;
+  background-color: #141e2b;
+
+  &.active {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: none;
+    background: none;
+    color: #eef8fb;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  &__list {
+    list-style: none;
+
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: #eef8fb;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+
+// simpel underside placeholder
+.page-hero {
+  min-height: 100vh;
+  padding: 10rem 3rem 4rem;
+
+  h1 {
+    max-width: 800px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}

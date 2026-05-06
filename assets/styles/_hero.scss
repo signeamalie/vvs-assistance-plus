@@ -1,0 +1,94 @@
+.hero {
+    position: relative;
+    min-height: 88vh;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    color: #eef8fb;
+  
+    // baggrundsbillede
+    &__bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      min-height: 100%;
+      background-image: url("../images/copenhagen.webp");
+      background-size: cover;
+      background-position: center;
+    }
+  
+    // hero indhold
+    &__content {
+      max-width: 1000px;
+      margin-left: 3rem;
+      padding: 7rem 0 2rem;
+    }
+  
+    &__title {
+      max-width: 620px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-size: clamp(1.4rem, 1.8vw, 2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: 0.5px;
+    }
+  
+    &__text {
+      margin-bottom: 0.7rem;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+  
+    // servicepunkter
+    &__services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 950px;
+      margin-top: 4rem;
+    }
+  
+    &__service {
+      h2 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.6rem, 2.3vw, 2.4rem);
+        font-weight: 900;
+      }
+  
+      li {
+        margin-bottom: 0.6rem;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  
+    // knapper
+    &__buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+      max-width: 900px;
+      margin-top: 2rem;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .hero {
+      padding: 0 1.5rem;
+  
+      &__content {
+        margin-left: 0;
+        padding: 6rem 0 2rem;
+      }
+  
+      &__services,
+      &__buttons {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+  
+      &__services {
+        margin-top: 3rem;
+      }
+    }
+  }

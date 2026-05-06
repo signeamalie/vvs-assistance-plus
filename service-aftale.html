@@ -1,28 +1,57 @@
 <!doctype html>
 <html lang="da">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VVS Assistance+ Serviceaftale</title>
+
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script src="./js/main.js" defer></script>
-         <!--google fonts-->
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
   </head>
+
   <body>
-  
-        <!-- header (kommer senere) -->
-    <header></header>
-  
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="VVS Assistance logo" class="header__logo">
+        </a>
+
+        <button class="header__burger" id="burgerBtn" aria-label="åbn menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- fuldskærmsmenu -->
+      <nav class="menu" id="menu">
+        <button class="menu__close" id="closeBtn" aria-label="luk menu">✕</button>
+
+        <ul class="menu__list">
+          <li><a href="#">Ring til os</a></li>
+          <li><a href="#">Akut</a></li>
+          <li><a href="#">Book online</a></li>
+          <li><a href="#">Få et VVS-tilbud</a></li>
+          <li><a href="#">Erhverv</a></li>
+          <li><a href="#">Om os</a></li>
+          <li><a href="service-aftale.html">VVS Assistance+</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
-      <section>
+      <!-- serviceaftale side -->
+      <section class="page-hero">
         <h1>VVS Assistance+ Serviceaftale</h1>
-        <p>placeholder</p>
+        <p>serviceaftaler placeholder</p>
       </section>
     </main>
-  
   </body>
 </html>
