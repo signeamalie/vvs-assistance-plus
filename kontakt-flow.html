@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontakt om serviceaftale</title>
+
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="./js/main.js" defer></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="VVS Assistance logo" class="header__logo">
+        </a>
+
+        <button class="header__burger" id="burgerBtn" aria-label="åbn menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- fuldskærmsmenu -->
+      <nav class="menu" id="menu">
+        <button class="menu__close" id="closeBtn" aria-label="luk menu">✕</button>
+
+        <ul class="menu__list">
+          <li><a href="#">Ring til os</a></li>
+          <li><a href="#">Akut</a></li>
+          <li><a href="#">Book online</a></li>
+          <li><a href="#">Få et VVS-tilbud</a></li>
+          <li><a href="#">Erhverv</a></li>
+          <li><a href="#">Om os</a></li>
+          <li>
+            <a href="service-aftale.html" class="menu__logo-link">
+              <img 
+                src="./assets/images/vvsassistance+.svg" 
+                alt="VVS Assistance+"
+                class="menu__service-logo"
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- kontaktflow -->
+      <section class="contact-flow">
+        <article class="contact-flow__intro">
+            <img 
+            src="./assets/images/vvsassistance+.svg" 
+            alt="VVS Assistance Plus logo"
+            class="contact-flow__logo"
+          >
+          
+          <p class="contact-flow__eyebrow">næste skridt</p>
+
+          <h1 class="contact-flow__title">
+            lad os kontakte dig om en serviceaftale
+          </h1>
+
+          <p class="contact-flow__text">
+            Udfyld dine oplysninger, så kontakter vi dig og gennemgår den løsning,
+            der passer bedst til dit behov. Du binder dig ikke ved at sende formularen.
+          </p>
+        </article>
+
+        <article class="contact-flow__card">
+            <form class="contact-form" id="contactForm">
+            <!-- valg af aftale -->
+            <fieldset class="contact-form__group">
+              <legend>hvilken aftale er du interesseret i?</legend>
+
+              <label class="contact-form__choice">
+                <input type="radio" name="aftale" value="privat" checked>
+                <span>privat serviceaftale</span>
+              </label>
+
+              <label class="contact-form__choice">
+                <input type="radio" name="aftale" value="erhverv">
+                <span>erhvervsaftale</span>
+              </label>
+            </fieldset>
+
+            <!-- kontaktoplysninger -->
+            <fieldset class="contact-form__group">
+              <legend>dine oplysninger</legend>
+
+              <label>
+                navn
+                <input type="text" name="navn" placeholder="dit navn">
+              </label>
+
+              <label>
+                telefonnummer
+                <input type="tel" name="telefon" placeholder="dit telefonnummer">
+              </label>
+
+              <label>
+                email
+                <input type="email" name="email" placeholder="din email">
+              </label>
+
+              <label>
+                kort besked
+                <textarea name="besked" placeholder="skriv en kort besked"></textarea>
+              </label>
+            </fieldset>
+
+            <button type="submit" class="button contact-form__button">
+              send forespørgsel
+            </button>
+
+            <p class="contact-form__note">
+                Du binder dig ikke ved at sende formularen. Vi kontakter dig hurtigst muligt og gennemgår aftalen sammen med dig.
+              </p>
+          </form>
+
+          <div class="contact-success" id="contactSuccess">
+            <h2>tak for din henvendelse</h2>
+          
+            <p>
+              Vi har modtaget din forespørgsel og vender tilbage hurtigst muligt
+              for at gennemgå den løsning, der passer bedst til dit behov.
+            </p>
+          </div>
+
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

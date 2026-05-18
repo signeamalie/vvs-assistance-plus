@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VVS Assistance+ Serviceaftale</title>
+    <title>VVS Assistance+</title>
 
     <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
     <link rel="stylesheet" href="./assets/styles/style.css">
@@ -35,22 +35,141 @@
         <button class="menu__close" id="closeBtn" aria-label="luk menu">✕</button>
 
         <ul class="menu__list">
-          <li><a href="#">Ring til os</a></li>
-          <li><a href="#">Akut</a></li>
-          <li><a href="#">Book online</a></li>
-          <li><a href="#">Få et VVS-tilbud</a></li>
-          <li><a href="#">Erhverv</a></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="service-aftale.html">VVS Assistance+</a></li>
-        </ul>
+            <li><a href="#">Ring til os</a></li>
+            <li><a href="#">Akut</a></li>
+            <li><a href="#">Book online</a></li>
+            <li><a href="#">Få et VVS-tilbud</a></li>
+            <li><a href="#">Erhverv</a></li>
+            <li><a href="#">Om os</a></li>
+            <li>
+              <a href="service-aftale.html" class="menu__logo-link">
+                <img 
+                  src="./assets/images/vvsassistance+.svg" 
+                  alt="VVS Assistance+"
+                  class="menu__service-logo"
+                >
+              </a>
+            </li>
+          </ul>
       </nav>
     </header>
 
     <main>
-      <!-- serviceaftale side -->
-      <section class="page-hero">
-        <h1>VVS Assistance+ Serviceaftale</h1>
-        <p>serviceaftaler placeholder</p>
+      <!-- intro til serviceaftaler -->
+      <section class="service-page-hero">
+        <img 
+        src="./assets/images/vvsassistance+.svg" 
+        alt="VVS Assistance Plus logo"
+        class="service-page-hero__logo"
+      >
+        <h1 class="service-page-hero__title">
+          serviceaftaler der giver overblik, før problemet opstår
+        </h1>
+
+        <p class="service-page-hero__text">
+          Vælg den løsning, der passer til dit behov. Begge aftaler er skabt til at gøre VVS-service
+          mere overskueligt med tydelig pris, fast kontakt og konkret hjælp, når du har brug for det.
+        </p>
+      </section>
+
+      <!-- valg af aftale -->
+      <section class="agreement-options">
+        <article class="agreement-card">
+          <p class="agreement-card__label">privat</p>
+
+          <h2 class="agreement-card__title">til private hjem</h2>
+
+          <p class="agreement-card__text">
+            For dig der ønsker tryghed i boligen, færre uforudsete problemer og en fast VVS-kontakt,
+            som er nem at kontakte.
+          </p>
+
+          <ul class="agreement-card__list">
+            <li>fast kontakt til VVS-service</li>
+            <li>
+                <details class="vvs-check">
+                  <summary>årligt VVS-tjek i hjemmet</summary>
+                  <p>
+                    Gennemgang af synlige VVS-installationer, rør, vandtryk og tegn på slid eller utætheder.
+                  </p>
+                </details>
+              </li>            
+            <li>50% rabat på akut gebyr én gang årligt</li>
+            <li>gennemsigtig prisstruktur</li>
+            <li>ingen binding</li>
+          </ul>
+
+          <a href="kontakt-flow.html" class="button agreement-card__button">
+            vælg privat aftale
+          </a>        
+
+          <p class="agreement-card__price">
+            fra 129 kr./md. inkl. årligt VVS-tjek og 50% rabat på akut gebyr én gang årligt
+          </p>
+        </article>
+
+        <article class="agreement-card">
+          <p class="agreement-card__label">erhverv</p>
+
+          <h2 class="agreement-card__title">til virksomheder</h2>
+
+          <p class="agreement-card__text">
+            For virksomheder der ønsker en fast VVS-partner, mindre driftstop og en løsning,
+            der kan tilpasses virksomhedens behov.
+          </p>
+
+          <ul class="agreement-card__list">
+            <li>fast erhvervskontakt</li>
+            <li>prioriteret hjælp</li>
+            <li>
+                <details class="vvs-check">
+                  <summary>planlagt vedligehold</summary>
+                  <p>
+                    Gennemgang af relevante VVS-installationer og vurdering af behov for vedligehold.
+                  </p>
+                </details>
+              </li>            
+            <li>50% rabat på akut gebyr én gang årligt</li>
+            <li>tilpasset erhvervsbehov</li>
+          </ul>
+
+          <a href="kontakt-flow.html" class="button agreement-card__button">
+            vælg erhvervsaftale
+          </a>
+          
+          <p class="agreement-card__price">
+            fra 349 kr./md. inkl. fast erhvervskontakt, planlagt vedligehold og 50% rabat på akut gebyr én gang årligt
+          </p>
+        </article>
+      </section>
+
+      <!-- forklaring af proces -->
+      <section class="agreement-process">
+        <p class="agreement-process__eyebrow">sådan fungerer det</p>
+
+        <h2 class="agreement-process__title">
+          en enkel proces uden unødvendige spørgsmål
+        </h2>
+
+        <div class="agreement-process__steps">
+          <article class="agreement-process__step">
+            <span>01</span>
+            <h3>vælg en løsning</h3>
+            <p>Du vælger den aftale, der passer bedst til dit hjem eller din virksomhed.</p>
+          </article>
+
+          <article class="agreement-process__step">
+            <span>02</span>
+            <h3>vi kontakter dig</h3>
+            <p>Vi gennemgår behovet med dig, så aftalen bliver tydelig og relevant.</p>
+          </article>
+
+          <article class="agreement-process__step">
+            <span>03</span>
+            <h3>du får fast hjælp</h3>
+            <p>Du får en mere overskuelig løsning og ved, hvem du skal kontakte næste gang.</p>
+          </article>
+        </div>
       </section>
     </main>
   </body>

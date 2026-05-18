@@ -1,7 +1,8 @@
 @import "header";
 @import "buttons";
-@import "hero";
 @import "service-plus";
+@import "service-page";
+@import "contact-flow";
 
 * {
   margin: 0;
@@ -23,63 +24,134 @@ body {
 
 // fuldskærmsmenu
 .menu {
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 3rem;
-  background-color: #141e2b;
-
-  &.active {
-    display: flex;
-  }
-
-  &__close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    border: none;
-    background: none;
-    color: #eef8fb;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  &__list {
-    list-style: none;
-
-    li {
-      margin-bottom: 1.5rem;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem;
+    background-color: #141e2b;
+  
+    &.active {
+      display: flex;
     }
-
-    a {
+  
+    &__close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      border: none;
+      background: none;
       color: #eef8fb;
-      text-decoration: none;
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  
+    &__list {
+      list-style: none;
+  
+      li {
+        margin-bottom: 1.5rem;
+      }
+  
+      a {
+        color: #eef8fb;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  
+    // VVS Assistance+ logo i menu
+    &__logo-link {
+      display: inline-block;
+    }
+  
+    &__service-logo {
+        width: 190px;
+        height: auto;
+        display: block;
+        margin-top: 0.4rem;
     }
   }
+  
+  @media (max-width: 800px) {
+    .menu {
+      &__service-logo {
+        width: 170px;
+      }
+    }
+  }
+
+//enkelte logoer på service plus og service page hero
+.service-plus__logo,
+.service-page-hero__logo {
+  width: 160px;
+  margin-bottom: 1.4rem;
 }
+@media (max-width: 900px) {
+    .service-plus__logo,
+    .service-page-hero__logo {
+      width: 135px;
+    }
+  }
 
-// simpel underside placeholder
-.page-hero {
-  min-height: 100vh;
-  padding: 10rem 3rem 4rem;
-
-  h1 {
-    max-width: 800px;
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    line-height: 1.05;
+  .service-plus__card-logo {
+    width: 240px;
     margin-bottom: 1rem;
   }
-
-  p {
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.7;
+  @media (max-width: 900px) {
+    .service-plus__card-logo {
+      width: 190px;
+    }
   }
-}
+
+  .contact-flow__logo {
+    width: 150px;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 900px) {
+    .contact-flow__logo {
+      width: 125px;
+    }
+  }
+
+
+
+// dropdown til VVS-tjek
+.vvs-check {
+    display: inline-block;
+  
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: inherit;
+    }
+  
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  
+    summary::after {
+      content: "v";
+      margin-left: 0.4rem;
+      color: #00b67a;
+      font-weight: 900;
+    }
+  
+    &[open] summary::after {
+      content: "−";
+    }
+  
+    p {
+      max-width: 420px;
+      margin-top: 0.55rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: rgba(20, 30, 43, 0.65);
+      font-weight: 500;
+    }
+  }
