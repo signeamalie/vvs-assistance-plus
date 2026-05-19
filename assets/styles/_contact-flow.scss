@@ -3,6 +3,8 @@
     grid-template-columns: 0.9fr 1.1fr;
     gap: 5rem;
     min-height: 100vh;
+    max-width: 1500px;
+    margin: 0 auto;
     padding: 11rem 3rem 6rem;
     background-color: #141e2b;
     color: #eef8fb;
@@ -22,7 +24,7 @@
     &__title {
       max-width: 720px;
       margin-bottom: 1.5rem;
-      font-size: clamp(2.8rem, 5vw, 5.8rem);
+      font-size: clamp(2.8rem, 4.4vw, 5rem);
       line-height: 1.02;
       font-weight: 900;
     }
@@ -55,9 +57,11 @@
       border: none;
   
       legend {
+        width: 100%;
         margin-bottom: 0.5rem;
         font-size: 1.2rem;
         font-weight: 900;
+        white-space: nowrap;
       }
   
       label {
